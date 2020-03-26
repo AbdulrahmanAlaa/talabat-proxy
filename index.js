@@ -24,6 +24,10 @@ app.use(
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'src/index.html'));
 });
-createServer(credentials, app).listen(port, () => {
-  console.log(`Node Express server listening on https://localhost:${port}`);
-});
+app.listen(port, () => {
+    console.log(`Node Express server listening on https://localhost:${port}`);
+  });
+
+// createServer(credentials, app).listen(port, () => {
+//   console.log(`Node Express server listening on https://localhost:${port}`);
+// });
